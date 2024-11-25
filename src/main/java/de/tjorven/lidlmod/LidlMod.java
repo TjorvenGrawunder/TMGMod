@@ -1,7 +1,9 @@
 package de.tjorven.lidlmod;
 
 import com.mojang.logging.LogUtils;
+import de.tjorven.lidlmod.item.ModItems;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -31,6 +33,9 @@ public class LidlMod {
 
         MinecraftForge.EVENT_BUS.register(this);
 
+        // Register the DeferredRegister to the mod event bus
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
 
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -41,6 +46,9 @@ public class LidlMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.LIDL_BOTTLE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
