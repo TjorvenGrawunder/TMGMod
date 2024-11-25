@@ -13,7 +13,7 @@ public class ModItems {
 
 
     // Register items here
-    public static final RegistryObject<Item> LIDL_BOTTLE = ITEMS.register("lidlbottle", () -> new LidlBottle(new Item.Properties()));
+    public static final RegistryObject<Item> LIDL_BOTTLE = ITEMS.register("lidl_bottle", () -> new LidlBottle(new Item.Properties()));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

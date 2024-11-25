@@ -1,3 +1,7 @@
 {
-  "item.lidlmod.lidlbottle": "Lidl Bottle"
+  "item.lidlmod.lidl_bottle": "Lidl Bottle",
+
+  "block.lidlmod.lidl_ore": "Lidl Ore",
+
+  "creativetab.lidlmod.lidl_tab": "Lidl Mod"
 }
