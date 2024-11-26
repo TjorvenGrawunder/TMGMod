@@ -20,6 +20,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                                 output.accept(ModItems.LIDL_BOTTLE.get());
                                 output.accept(ModBlocks.LIDL_ORE.get());
+                                output.accept(ModItems.RAW_LIDL_CHUNK.get());
+                                output.accept(ModItems.LIDL_INGOT.get());
                             }).build());
 
 
