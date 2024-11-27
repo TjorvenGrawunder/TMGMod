@@ -1,4 +1,4 @@
-package de.tjorven.lidlmod.tabs;
+package de.tjorven.lidlmod.misc;
 
 import de.tjorven.lidlmod.LidlMod;
 import de.tjorven.lidlmod.block.ModBlocks;

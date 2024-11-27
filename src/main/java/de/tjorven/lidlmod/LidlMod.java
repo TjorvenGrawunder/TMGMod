@@ -3,7 +3,7 @@ package de.tjorven.lidlmod;
 import com.mojang.logging.LogUtils;
 import de.tjorven.lidlmod.block.ModBlocks;
 import de.tjorven.lidlmod.item.ModItems;
-import de.tjorven.lidlmod.tabs.ModCreativeModeTabs;
+import de.tjorven.lidlmod.misc.ModCreativeModeTabs;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
