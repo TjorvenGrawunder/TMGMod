@@ -36,6 +36,5 @@ public class ModBlocks {
 
     public static void registerBlock(IEventBus modEventBus) {
         BLOCKS.register(modEventBus);
-        BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE);
     }
 }
