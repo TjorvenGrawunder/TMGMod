@@ -24,6 +24,10 @@ public class ModBlocks {
             new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final RegistryObject<Block> DEEPSLATE_LIDL_ORE = registerBlock("deepslate_lidl_ore", ()->
+            new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
+                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> registryObject = BLOCKS.register(name, block);
         registerBlockItem(name, registryObject);

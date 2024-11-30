@@ -18,6 +18,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.LIDL_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_LIDL_ORE);
 
     }
 

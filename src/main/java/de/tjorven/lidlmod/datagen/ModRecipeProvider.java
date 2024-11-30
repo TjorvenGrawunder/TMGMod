@@ -41,6 +41,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(pRecipeOutput, LIDL_SMELTABLES, RecipeCategory.MISC, ModItems.LIDL_INGOT.get(), 1.0F, 200, "lidlingot");
         oreBlasting(pRecipeOutput, LIDL_SMELTABLES, RecipeCategory.MISC, ModItems.LIDL_INGOT.get(), 1.0F, 100, "lidlingot");
 
+
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

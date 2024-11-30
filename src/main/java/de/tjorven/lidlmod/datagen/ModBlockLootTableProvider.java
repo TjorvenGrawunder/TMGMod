@@ -32,6 +32,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.LIDL_ORE.get());
 
         this.add(ModBlocks.LIDL_ORE.get(), (block) -> createOreDrop(ModBlocks.LIDL_ORE.get(), ModItems.RAW_LIDL_CHUNK.get()));
+        this.add(ModBlocks.DEEPSLATE_LIDL_ORE.get(), (block) -> createOreDrop(ModBlocks.DEEPSLATE_LIDL_ORE.get(), ModItems.RAW_LIDL_CHUNK.get()));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

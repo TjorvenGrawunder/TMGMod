@@ -20,11 +20,15 @@ import java.util.List;
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_LIDL_ORE_KEY = registerKey("lidl_ore");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DEEPSLATE_LIDL_ORE_KEY = registerKey("deepslate_lidl_ore");
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceable = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
         List<OreConfiguration.TargetBlockState> overworldLidlOres = List.of(OreConfiguration.target(stoneReplaceable,
-                        ModBlocks.LIDL_ORE.get().defaultBlockState()));
+                        ModBlocks.LIDL_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceable, ModBlocks.DEEPSLATE_LIDL_ORE.get().defaultBlockState()));
 
         register(context, OVERWORLD_LIDL_ORE_KEY, Feature.ORE, new OreConfiguration(overworldLidlOres, 9));
     }
