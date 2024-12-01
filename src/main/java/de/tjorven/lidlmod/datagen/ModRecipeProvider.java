@@ -35,6 +35,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('L', ModItems.LIDL_INGOT.get())
                 .unlockedBy(getHasName(ModItems.LIDL_INGOT.get()), has(ModItems.LIDL_INGOT.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LIDL_GEM.get())
+                .pattern("LLL")
+                .pattern("DED")
+                .pattern("LLL")
+                .define('D', Items.DIAMOND)
+                .define('E', Items.EMERALD)
+                .define('L', ModItems.LIDL_INGOT.get())
+                .unlockedBy(getHasName(ModItems.LIDL_INGOT.get()), has(ModItems.LIDL_INGOT.get())).save(pRecipeOutput);
+
+        // Shaped Recipe for Lidl Pickaxe
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LIDL_PICKAXE.get())
+                .pattern("LLL")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('L', ModItems.LIDL_GEM.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.LIDL_GEM.get()), has(ModItems.LIDL_GEM.get())).save(pRecipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.BEDROCK, 1)
                 .requires(Items.DIAMOND_BLOCK, 9).unlockedBy(getHasName(Items.DIAMOND_BLOCK), has(Items.DIAMOND_BLOCK)).save(pRecipeOutput);
 

@@ -18,5 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.LIDL_BOTTLE.get());
         basicItem(ModItems.RAW_LIDL_CHUNK.get());
         basicItem(ModItems.LIDL_INGOT.get());
+        basicItem(ModItems.LIDL_GEM.get());
+        basicItem(ModItems.LIDL_PICKAXE.get());
     }
 }

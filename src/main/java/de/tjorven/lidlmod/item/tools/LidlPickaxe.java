@@ -1,12 +1,15 @@
 package de.tjorven.lidlmod.item.tools;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.Tiers;
+import de.tjorven.lidlmod.misc.tooltiers.LidlTiers;
+import net.minecraft.world.item.*;
 
 public class LidlPickaxe extends PickaxeItem {
     public LidlPickaxe() {
-        super(Tiers.DIAMOND, new Item.Properties().durability(1000));
+        super(LidlTiers.SUPER_TIER, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.DIAMOND, 2.0F, -2.8F)));
+    }
+
+    @Override
+    public int getEnchantmentValue(ItemStack stack) {
+        return super.getEnchantmentValue(stack);
     }
 }

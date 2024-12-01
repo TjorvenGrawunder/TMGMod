@@ -22,6 +22,8 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.LIDL_ORE.get());
                                 output.accept(ModItems.RAW_LIDL_CHUNK.get());
                                 output.accept(ModItems.LIDL_INGOT.get());
+                                output.accept(ModItems.LIDL_GEM.get());
+                                output.accept(ModItems.LIDL_PICKAXE.get());
                             }).build());
 
 
