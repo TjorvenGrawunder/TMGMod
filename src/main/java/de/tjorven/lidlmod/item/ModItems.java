@@ -1,7 +1,9 @@
 package de.tjorven.lidlmod.item;
 
 import de.tjorven.lidlmod.LidlMod;
+import de.tjorven.lidlmod.item.tools.LidlAxe;
 import de.tjorven.lidlmod.item.tools.LidlPickaxe;
+import de.tjorven.lidlmod.item.tools.LidlSword;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,6 +21,8 @@ public class ModItems {
     public static final RegistryObject<Item> LIDL_INGOT = ITEMS.register("lidl_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> LIDL_GEM = ITEMS.register("lidl_gem", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> LIDL_PICKAXE = ITEMS.register("lidl_pickaxe", LidlPickaxe::new);
+    public static final RegistryObject<Item> LIDL_SWORD = ITEMS.register("lidl_sword", LidlSword::new);
+    public static final RegistryObject<Item> LIDL_AXE = ITEMS.register("lidl_axe", LidlAxe::new);
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

@@ -53,6 +53,33 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', Items.STICK)
                 .unlockedBy(getHasName(ModItems.LIDL_GEM.get()), has(ModItems.LIDL_GEM.get())).save(pRecipeOutput);
 
+        // Axe Recipe
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LIDL_AXE.get())
+                .pattern("LL")
+                .pattern("LS")
+                .pattern(" S")
+                .define('L', ModItems.LIDL_GEM.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.LIDL_GEM.get()), has(ModItems.LIDL_GEM.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LIDL_AXE.get())
+                .pattern("LL")
+                .pattern("SL")
+                .pattern("S ")
+                .define('L', ModItems.LIDL_GEM.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.LIDL_GEM.get()), has(ModItems.LIDL_GEM.get())).save(pRecipeOutput, LidlMod.MODID + ":lidl_axe_v2");
+
+
+        // Sword Recipe
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LIDL_SWORD.get())
+                .pattern("L")
+                .pattern("L")
+                .pattern("S")
+                .define('L', ModItems.LIDL_GEM.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.LIDL_GEM.get()), has(ModItems.LIDL_GEM.get())).save(pRecipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.BEDROCK, 1)
                 .requires(Items.DIAMOND_BLOCK, 9).unlockedBy(getHasName(Items.DIAMOND_BLOCK), has(Items.DIAMOND_BLOCK)).save(pRecipeOutput);
 

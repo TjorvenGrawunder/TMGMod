@@ -24,6 +24,8 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.LIDL_INGOT.get());
                                 output.accept(ModItems.LIDL_GEM.get());
                                 output.accept(ModItems.LIDL_PICKAXE.get());
+                                output.accept(ModItems.LIDL_SWORD.get());
+                                output.accept(ModItems.LIDL_AXE.get());
                             }).build());
 
 
